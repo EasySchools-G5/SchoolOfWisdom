@@ -1,0 +1,93 @@
+/*------------------------------------------------------*/
+/*File Name: blue.css
+/*Description: This file contain styles for blue variation
+/*------------------------------------------------------*/
+h1 span {
+  color: #1999e2;
+}
+.top-contact-info .icon-calendar2,
+.top-contact-info .icon-email2,
+.top-contact-info .icon-newspaper {
+  color: #1999e2;
+}
+.top-contact-info a:hover {
+  color: #1999e2;
+}
+.top-contact-info #searchsubmit {
+  background: url("../images/search-icon-blue.png") center 10px no-repeat;
+}
+.top-contact-info .search-btn {
+  color: #1999e2;
+}
+.mean-container a.meanmenu-reveal span {
+  background: #1999e2;
+}
+.mean-container a.meanmenu-reveal {
+  color: #1999e2;
+}
+a:hover,
+a:focus,
+small.category,
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > a:hover i {
+  color: #1999e2;
+}
+.green-border {
+  border: 3px solid #1999e2;
+}
+.green-border:hover {
+  background: #1999e2;
+}
+.separator .short-border {
+  border: 2px solid #1999e2;
+}
+.main-slider,
+.news-letter,
+.our-partners,
+.recent-work .blockquote-wrap {
+  background: #1999e2;
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(90deg, #1999e2, #00e0ae);
+  background-image: linear-gradient(90deg, #1999e2, #00e0ae);
+}
+.about-us .img-circle {
+  background: #1999e2;
+}
+.our-achievements small {
+  color: #1999e2;
+}
+.our-skills #accordion a.entry-title {
+  background: url("../images/toggle-open-close.png") 95% -124px no-repeat #1999e2;
+}
+.our-skills #accordion a.collapsed {
+  background: url("../images/toggle-open-close.png") 95% 20px no-repeat #323232;
+}
+.our-team .entry-footer {
+  background: #1999e2;
+}
+.recent-work #filters li a.active {
+  color: #1999e2;
+}
+.our-skills .owl-pagination .owl-page.active {
+  background: #1999e2;
+}
+#footer-wrapper a:hover {
+  color: #1999e2;
+}
+#scroll-top {
+  background: #1999e2;
+}
+.recent-work .wrapper-container .icon-search {
+  background: #1999e2;
+}
+.recent-work .wrapper-container .icon-search:hover {
+  background: #1B76AA;
+}
+.main-slider .owl-dots .owl-dot,
+.our-skills .owl-dots .owl-dot.active {
+  background: #1999e2;
+}
+.our-skills #accordion a.collapsed:hover {
+  background: url("../images/toggle-open-close.png") 95% 22px no-repeat #1999e2;
+}
