@@ -161,4 +161,16 @@ public class EazyBeans {
         ArrayList ilist = mp.getListEmp(eb);
         return ilist;
     }
+    
+    public String deleteEmployee(EazyBeans eb) {
+
+
+        String status = mp.deleteEmployee(eb);
+        return status;
+    }
+    
+    public String changeAdminPassword(EazyBeans eb) {
+        String status = mp.adminPassword(eb);
+        return status;
+    }
 }

@@ -47,7 +47,40 @@ public class MyProjectLayer {
         }
         return mlist;
     }
+    public String deleteEmployee(EazyBeans eb) {
+        String status = "failed";
+        try {
+            con = myConnection();
+            stmt = con.createStatement();
+            String getDelete = "delete from employee where id=" + eb.getId() + "";
+            int i = stmt.executeUpdate(getDelete);
+            if (i > 0) {
+                status = "done";
+            }
+        } catch (Exception e) {
+            System.out.println("Exception in deleteEmployee : " + e);
+        }
+        return status;
+    }
+    
+    public String adminPassword(EazyBeans eb) {
+        String status = "failed";
 
+        try {
+            con = myConnection();
+            stmt = con.createStatement();
+            String getPass = "update admin set password='" + eb.getUname() + "' where id=" + eb.getId() + " and password='" + eb.getPass() + "'";
+            int i = stmt.executeUpdate(getPass);
+            if (i > 0) {
+                status = "done";
+                }
+        } catch (Exception e) {
+            System.out.println("Exception in adminPassword : " + e);
+        }
+        return status;
+
+    }
+    
     public ArrayList getFullEmp(EazyBeans eb) {
         ArrayList mlist = new ArrayList();
         try {

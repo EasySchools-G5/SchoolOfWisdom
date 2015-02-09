@@ -14,9 +14,9 @@
     </div>
     <div class="heading-buttons-sec">
         <h1>Dashboard</h1>
-        <p>Good Morning Lara Smith!!</p>
+        <p>Good Morning Developers!!</p>
     </div>
     <div class="body-sec" style="width: 700px;">
-        Puneet veer
+        APN Inc.
     </div>
 </div>
