@@ -5,8 +5,24 @@ import java.util.ArrayList;
 
 public class EazyBeans {
 
-    private String addr, idStatus, email, uname, gender, pass, utype, sname, board, medium, state, city, id, usertype, dob, phone, ecp, ephone;
+    private String qual, desg, addr, idStatus, email, uname, gender, pass, utype, sname, board, medium, state, city, id, usertype, dob, phone, ecp, ephone;
     MyProjectLayer mp = new MyProjectLayer();
+
+    public String getQual() {
+        return qual;
+    }
+
+    public void setQual(String qual) {
+        this.qual = qual;
+    }
+
+    public String getDesg() {
+        return desg;
+    }
+
+    public void setDesg(String desg) {
+        this.desg = desg;
+    }
 
     public String getAddr() {
         return addr;
@@ -152,8 +168,41 @@ public class EazyBeans {
         this.utype = utype;
     }
 
+    public String loginStatus(EazyBeans eb) {
+        String status = mp.LoginEmp(eb);
+        return status;
+    }
+
+    public String getRegister(EazyBeans eb) {
+        String status = "";
+        String utype = eb.getUsertype();
+        if (utype.equals("emp")) {
+            status = mp.getEmployeeRegister(eb);
+        } else if (utype.equals("teacher")) {
+            status = mp.getTeacherRegister(eb);
+        } else if (utype.equals("sch")) {
+            status = mp.getSchoolRegister(eb);
+        }
+        return status;
+    }
+
+    public ArrayList SchoolgetFullinfo(EazyBeans eb) {
+        ArrayList ilist = mp.getFullClient(eb);
+        return ilist;
+    }
+
     public ArrayList EmployeegetFullinfo(EazyBeans eb) {
         ArrayList ilist = mp.getFullEmp(eb);
+        return ilist;
+    }
+
+    public ArrayList teacherGetFullInfo(EazyBeans eb) {
+        ArrayList ilist = mp.getFullTeacher(eb);
+        return ilist;
+    }
+
+    public ArrayList getClientList(EazyBeans eb) {
+        ArrayList ilist = mp.getListClient(eb);
         return ilist;
     }
 
@@ -161,16 +210,93 @@ public class EazyBeans {
         ArrayList ilist = mp.getListEmp(eb);
         return ilist;
     }
-    
+
+    public ArrayList getTeacherList(EazyBeans eb) {
+        ArrayList ilist = mp.getListTeacher(eb);
+        return ilist;
+    }
+
+    public String deleteSchool(EazyBeans eb) {
+        String status = mp.deleteSchool(eb);
+        return status;
+    }
+
+    public String deleteTeacher(EazyBeans eb) {
+        String status = mp.deleteTeacher(eb);
+        return status;
+    }
+
     public String deleteEmployee(EazyBeans eb) {
-
-
         String status = mp.deleteEmployee(eb);
         return status;
     }
-    
-    public String changeAdminPassword(EazyBeans eb) {
-        String status = mp.adminPassword(eb);
+
+    public String deactivateSchool(EazyBeans eb) {
+        String status = mp.deactivateSchool(eb);
         return status;
+    }
+
+    public String activateSchool(EazyBeans eb) {
+        String status = mp.activateSchool(eb);
+        return status;
+    }
+
+    public String deactivateTeacher(EazyBeans eb) {
+        String status = mp.deactivateTeacher(eb);
+        return status;
+    }
+
+    public String activateTeacher(EazyBeans eb) {
+        String status = mp.activateTeacher(eb);
+        return status;
+    }
+
+    public String changePassword(EazyBeans eb) {
+        String status = "";
+        String utype = eb.getUsertype();
+        if (utype.equals("admin")) {
+            status = mp.adminPassword(eb);
+        } else if (utype.equals("school")) {
+            status = mp.getSchoolPassword(eb);
+        }
+
+        return status;
+    }
+
+    public ArrayList getSchoolInfo(EazyBeans eb) {
+        ArrayList ilist = mp.getSchoolGlance(eb);
+        return ilist;
+    }
+
+    public ArrayList getClassList(EazyBeans eb) {
+        ArrayList elist = mp.getMyClassList(eb);
+        return elist;
+    }
+
+    public String updateGlance(EazyBeans eb) {
+        String status = mp.glanceUpdate(eb);
+        return status;
+    }
+
+    public String updateEvents(EazyBeans eb) {
+        String status = mp.eventsUpdate(eb);
+        return status;
+    }
+
+    public String insertClass(EazyBeans eb) {
+        String status = mp.addNewClass(eb);
+        return status;
+    }
+    public String insertSection(EazyBeans eb) {
+        String status = mp.addNewSection(eb);
+        return status;
+    }
+    public String insertSubject(EazyBeans eb) {
+        String status = mp.addNewSubject(eb);
+        return status;
+    }
+    public String assignWork(EazyBeans eb){
+        String status=mp.assignTeacherWork(eb);
+        return status; 
     }
 }
