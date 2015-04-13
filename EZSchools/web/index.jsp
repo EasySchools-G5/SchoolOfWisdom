@@ -1,9 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <!-- META TAGS -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,24 +34,7 @@
     </head>
 
     <body>
-		<%
-            session.setAttribute("session_user", "admin");
-            session.setAttribute("session_id", "1");
-            session.setAttribute("session_type", "admin");
-        %>
-<h1>Responsive design of all pages : </h1><a href="task/index.jsp">Click here</a>
-        <br/>
-        <h1>Responsive design Change password Form  : </h1><a href="task/admin/index.jsp?page=change">Click here</a>
-        <br/>
-        <h1>Employee List  : </h1><a href="task/admin/index.jsp?page=elist">Click here</a>
-
         <div id="website-loader"></div>
-
-
-
-
-
-
 
         <header id="header" class="site-header" role="banner">
             <div class="header-responsive text-center"><i class="glyphicon glyphicon-chevron-down"></i></div>
@@ -73,8 +53,6 @@
                     </div>
                 </div>
             </div>
-
-
 
             <div class="main-slider clearfix">
                 <div class="slides">

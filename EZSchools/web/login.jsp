@@ -155,13 +155,20 @@
                                         <%
                                             String msg = request.getParameter("do");
                                             if (msg != null) {
+                                                if (msg.equals("deactivate")) {
+                                        %>
+                                        <div id="dmsg" class="alert alert-danger">
+                                            <strong>Id is deactivated : </strong> For More Details contact the support team.
+                                            <a href='javascript:;' onclick="removeMsg()" style="float:right;" id="ex">x</a>
+                                        </div>
+                                        <%  } else {
                                         %>
                                         <div id="dmsg" class="alert alert-danger">
                                             <strong>Login Failed : </strong> Id Or Password Must be Wrong.
                                             <a href='javascript:;' onclick="removeMsg()" style="float:right;" id="ex">x</a>
                                         </div>
-
-                                        <%                            }
+                                        <%            }
+                                            }
                                         %>
                                         <div id="dmsg1">
                                             <div id="dmsg" class="alert alert-danger">
@@ -186,7 +193,7 @@
                                                         <option value="">Select User Type</option>
                                                         <option value="admin">Admin</option>
                                                         <option value="employee">Employee</option>
-                                                        <option value="principal">Principal</option>
+                                                        <option value="school">Principal</option>
                                                         <option value="teacher">Teacher</option>
                                                         <option value="guardian">Guardian</option>
                                                     </select>
